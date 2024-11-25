@@ -6,8 +6,10 @@ const ErrorPage = () => {
   console.log(error)
   return (
     <div>
-      <h1>Something went wrong.</h1>
+      <h2>Something went wrong.</h2>
+      <h1>{error.status}</h1>
       <p>{error.data}</p>
+      <p>{error.message}</p>
       <button onClick={()=> navigate(-1)}>Back</button>
       <NavLink to=''>
         <button>Go Back To Home</button>

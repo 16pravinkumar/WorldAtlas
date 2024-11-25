@@ -41,6 +41,7 @@ const SearchFilter = ({
           placeholder="search"
           value={search}
           onChange={handleSearches}
+          className="search-input"
         />
       </div>
 
