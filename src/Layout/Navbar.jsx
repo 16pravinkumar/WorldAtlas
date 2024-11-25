@@ -3,11 +3,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleButtonToggle = () => {
-    return setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header>
       <div className="container">
@@ -26,36 +31,43 @@ const Navbar = () => {
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
+                  onClick={handleMenuClose} // Close menu when link is clicked
                 >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about"
-                className={({ isActive, isPending }) =>
+                <NavLink
+                  to="/about"
+                  className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
-                
-
-                >About</NavLink>
+                  onClick={handleMenuClose} // Close menu when link is clicked
+                >
+                  About
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/country"
-                className={({ isActive, isPending }) =>
+                <NavLink
+                  to="/country"
+                  className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
-                
-
-                >Country</NavLink>
+                  onClick={handleMenuClose} // Close menu when link is clicked
+                >
+                  Country
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/contact"
-                className={({ isActive, isPending }) =>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
-                
-
-                >Contact</NavLink>
+                  onClick={handleMenuClose} // Close menu when link is clicked
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -70,4 +82,5 @@ const Navbar = () => {
     </header>
   );
 };
+
 export default Navbar;

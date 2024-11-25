@@ -532,6 +532,8 @@ country Card
 
   & .container-card {
    
+
+
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
   }
 
@@ -644,10 +646,16 @@ contact us Page ends here
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-section{
-    padding: 0 4rem;
+    padding: 0 0.5rem;
   }
   .section-contact{
     padding: 0 4rem;
+  }
+  .container-card{
+    padding: 0  4rem;
+  }
+  .country-content{
+    margin-top: 1rem;
   }
 }
 
